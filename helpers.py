@@ -38,8 +38,7 @@ def standardize_input(image, width, height):
 
     # Resize image and pre-process so that all "standard" images are the same size
     # cv2.resize
-    standard_im = none
-
+    standard_im = cv2.resize(image, dsize=(width, height), interpolation=cv2.INTER_CUBIC)
     return standard_im
 
 # With each loaded image, we also specify the expected output.
